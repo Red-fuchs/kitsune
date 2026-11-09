@@ -1,0 +1,127 @@
+{
+"_doc": "Answer-quality set for tool-context trimming (fix 3), labels written 2026-11-03 before any trim result. hit = regex (case-insens) in Gemma's answer. wiki = wiki_suche tool, web = netz_suche tool (tool outputs recorded once into sim/data/ctx_fixture.json so full vs trimmed context see identical text).",
+"wiki": [
+{
+"q": "Wer war Georgi Dimitrow?",
+"re": "bulgar|kommunist|komintern|ministerpräsident"
+},
+{
+"q": "Was ist die Alexander-Newski-Kathedrale?",
+"re": "sofia|kathedrale|orthodox"
+},
+{
+"q": "Wer war Johann Wolfgang von Goethe?",
+"re": "dichter|schriftsteller|weimar|faust|autor"
+},
+{
+"q": "Was ist Photosynthese?",
+"re": "licht|zucker|glucose|kohlenstoffdioxid|energie"
+},
+{
+"q": "Wann wurde die Berliner Mauer gebaut?",
+"re": "1961|einundsechzig"
+},
+{
+"q": "Was ist Kjufte?",
+"re": "hackfleisch|frikadelle|bulgar|fleisch"
+},
+{
+"q": "Wo liegt das Rila-Gebirge?",
+"re": "bulgarien"
+},
+{
+"q": "Wie hoch ist der Musala?",
+"re": "2925|2\\.925|neunhundertfünfundzwanzig|zweitausend"
+},
+{
+"q": "Wer hat die Glühbirne erfunden?",
+"re": "edison|swan|goebel|göbel"
+},
+{
+"q": "Was ist der Rhein?",
+"re": "fluss|strom|nordsee|schweiz"
+},
+{
+"q": "Wer war Zar Boris der Dritte?",
+"re": "bulgarien|zar"
+},
+{
+"q": "Was ist ein Schwarzes Loch?",
+"re": "gravitation|licht|raumzeit|masse|schwerkraft"
+},
+{
+"q": "Wann wurde die Bundesrepublik Deutschland gegründet?",
+"re": "1949|neunundvierzig"
+},
+{
+"q": "Was ist Banitsa?",
+"re": "blätterteig|käse|bulgar|gebäck|teig"
+},
+{
+"q": "Wer hat Unter dem Joch geschrieben?",
+"re": "wasow|vazov|wazow"
+},
+{
+"q": "Was ist die Hauptstadt von Bulgarien?",
+"re": "sofia"
+},
+{
+"q": "Was ist Rakia?",
+"re": "schnaps|obstbrand|brand|branntwein|spirituose|getränk"
+},
+{
+"q": "Wer entdeckte Amerika?",
+"re": "kolumbus|columbus"
+},
+{
+"q": "Wer war Marie Curie?",
+"re": "physik|chemi|radioakt|nobel"
+},
+{
+"q": "Was ist Plowdiw?",
+"re": "stadt|bulgarien|thrakien"
+}
+],
+"web": [
+{
+"q": "Wie hoch ist die Zugspitze?",
+"re": "2962|neunhundertzweiundsechzig|2\\.962"
+},
+{
+"q": "Wann wurde Angela Merkel geboren?",
+"re": "1954|vierundfünfzig"
+},
+{
+"q": "Wer hat die Fußball-Weltmeisterschaft 2014 gewonnen?",
+"re": "deutschland"
+},
+{
+"q": "Was ist die Hauptstadt von Australien?",
+"re": "canberra"
+},
+{
+"q": "Wie heißt der höchste Berg der Welt?",
+"re": "everest"
+},
+{
+"q": "Wer hat die Relativitätstheorie entwickelt?",
+"re": "einstein"
+},
+{
+"q": "Wie lang ist der Rhein?",
+"re": "1230|1233|1\\.2|zwölfhundert|tausendzweihundert"
+},
+{
+"q": "Wer hat Faust geschrieben?",
+"re": "goethe"
+},
+{
+"q": "In welchem Jahr fiel die Berliner Mauer?",
+"re": "1989|neunundachtzig"
+},
+{
+"q": "Wie viele Einwohner hat Berlin?",
+"re": "3,[5-9]|drei|3\\.[5-9]|millionen"
+}
+]
+}

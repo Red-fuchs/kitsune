@@ -1,0 +1,30 @@
+# fix 2/3 scenarios: wiki / web turns (filler -> answer handoff, underruns, first answer audio). Run: sim/run.py --scen-file sim/scenarios_fill.yaml --scen fill_wiki,fill_web
+- name: fill_wiki
+  desc: five wiki questions in a row (filler only if the tool is slow)
+  events:
+    - {say: "Wer war Georgi Dimitrow?", expect: {tool_in: [wiki_suche, wissen]}}
+    - {say: "Was ist die Alexander-Newski-Kathedrale?", expect: {tool_in: [wiki_suche, wissen]}}
+    - {say: "Erzähl mir etwas über das Rila-Gebirge.", expect: {tool_in: [wiki_suche, wissen]}}
+    - {say: "Wer war Zar Boris der Dritte?", expect: {tool_in: [wiki_suche, wissen]}}
+    - {say: "Was ist Photosynthese?", expect: {tool_in: [wiki_suche, wissen]}}
+- name: fill_web
+  desc: web searches (tool ~1 s)
+  events:
+    - {say: "Such im Internet die Öffnungszeiten vom Zoo in Sofia.", expect: {tool: netz_suche}}
+    - {say: "Kannst du im Web nachschauen, wie hoch die Zugspitze ist?", expect: {tool: netz_suche}}
+    - {say: "Google mal, wer die Fußball-Weltmeisterschaft 2014 gewonnen hat.", expect: {tool: netz_suche}}
+- name: fill_wiki2
+  desc: more wiki questions (second sample)
+  events:
+    - {say: "Wer war Marie Curie?", expect: {tool_in: [wiki_suche, wissen]}}
+    - {say: "Was ist ein Schwarzes Loch?", expect: {tool_in: [wiki_suche, wissen]}}
+    - {say: "Wo liegt das Rila-Kloster?", expect: {tool_in: [wiki_suche, wissen, fakt]}}
+    - {say: "Wer war Napoleon?", expect: {tool_in: [wiki_suche, wissen]}}
+    - {say: "Was ist Rakia?", expect: {tool_in: [wiki_suche, wissen, dict]}}
+    - {say: "Wer hat die Glühbirne erfunden?", expect: {tool_in: [wiki_suche, wissen]}}
+- name: fill_web2
+  desc: more web searches (second sample)
+  events:
+    - {say: "Such im Netz nach dem Fahrplan von Sofia nach Plowdiw.", expect: {tool: netz_suche}}
+    - {say: "Schau mal im Internet nach, was ein Kilo Tomaten kostet.", expect: {tool: netz_suche}}
+    - {say: "Google mal die Öffnungszeiten vom Rila-Kloster.", expect: {tool: netz_suche}}

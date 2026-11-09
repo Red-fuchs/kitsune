@@ -1,0 +1,39 @@
+# extra barge/TV variants (python sim/run.py --scen-file sim/scenarios_barge.yaml --scen tv_ans_m15,...)
+- name: tv_ans_m15
+  desc: TV -15 dB starts during the answer -> no false barge
+  run_for: 26
+  expect_scn: {max_false_barge: 0}
+  events:
+    - {say: "Erkläre mir kurz, wie ein Regenbogen entsteht.", at: 2, expect: {tool_in: [wissen, wiki_suche, plaudern]}}
+    - {noise: tv, db: -15, after_kitsune_start: 0.5, dur: 9}
+- name: tv_ans_m8
+  desc: TV -8 dB starts during the answer -> no false barge
+  run_for: 26
+  expect_scn: {max_false_barge: 0}
+  events:
+    - {say: "Erkläre mir kurz, wie ein Regenbogen entsteht.", at: 2, expect: {tool_in: [wissen, wiki_suche, plaudern]}}
+    - {noise: tv, db: -8, after_kitsune_start: 0.5, dur: 9}
+- name: tv_ans_late
+  desc: TV -12 dB starts 3 s into the answer
+  run_for: 26
+  expect_scn: {max_false_barge: 0}
+  events:
+    - {say: "Erkläre mir kurz, wie ein Regenbogen entsteht.", at: 2, expect: {tool_in: [wissen, wiki_suche, plaudern]}}
+    - {noise: tv, db: -12, after_kitsune_start: 3.0, dur: 9}
+- name: tv_hard_ans
+  desc: "TV drama with questions/names -12 dB during the answer (hard case - questions pass the verify)"
+  run_for: 26
+  events:
+    - {say: "Erkläre mir kurz, wie ein Regenbogen entsteht.", at: 2, expect: {tool_in: [wissen, wiki_suche, plaudern]}}
+    - {noise: tv_hard, db: -12, after_kitsune_start: 0.5, dur: 9}
+- name: stopp_leise
+  desc: "Stopp quietly (-9 dB) during an answer -> cut"
+  events:
+    - {say: "Erkläre mir kurz, wie ein Regenbogen entsteht.", expect: {tool_in: [wissen, wiki_suche, plaudern]}}
+    - {say: "Stopp.", after_kitsune_start: 3.0, level_db: -9, expect: {barge: true}}
+- name: tv_user_barge
+  desc: TV -15 dB starts in the answer, 4 s later the user really interrupts with a question (must be cut)
+  events:
+    - {say: "Erkläre mir kurz, wie ein Regenbogen entsteht.", at: 2, expect: {tool_in: [wissen, wiki_suche, plaudern]}}
+    - {noise: tv, db: -15, after_kitsune_start: 0.5, dur: 20}
+    - {say: "Stopp, und warum ist er bunt?", after_kitsune_start: 4.5, expect: {barge: true}}

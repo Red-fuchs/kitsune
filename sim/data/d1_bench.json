@@ -1,0 +1,70 @@
+{
+ "d1-2B": {
+  "gate_text": {
+   "auc": 0.923,
+   "thr": 0.885,
+   "tpr": 0.75,
+   "fpr": 0.04,
+   "ms_med": 135,
+   "ms_p90": 227
+  },
+  "gate_text_noctx": {
+   "auc": 0.95,
+   "thr": 0.885,
+   "tpr": 0.85,
+   "fpr": 0.04,
+   "ms_med": 143,
+   "ms_p90": 190
+  },
+  "route_text": {
+   "acc": "21/22",
+   "ms_med": 210,
+   "miss": [
+    "Was bedeutet das Wort Weltschmerz? → wiki (soll dict)"
+   ]
+  }
+ },
+ "d1-omni": {
+  "gate_text": {
+   "auc": 0.789,
+   "thr": 0.795,
+   "tpr": 0.97,
+   "fpr": 0.44,
+   "ms_med": 144,
+   "ms_p90": 212
+  },
+  "gate_text_noctx": {
+   "auc": 0.839,
+   "thr": 0.876,
+   "tpr": 1.0,
+   "fpr": 0.36,
+   "ms_med": 142,
+   "ms_p90": 186
+  },
+  "route_text": {
+   "acc": "21/22",
+   "ms_med": 179,
+   "miss": [
+    "Was bedeutet das Wort Weltschmerz? → wiki (soll dict)"
+   ]
+  },
+  "gate_audio_noctx": {
+   "auc": 0.768,
+   "thr": 0.737,
+   "tpr": 0.92,
+   "fpr": 0.44,
+   "ms_med": 121,
+   "ms_p90": 175
+  },
+  "route_audio": {
+   "acc": "18/22",
+   "ms_med": 230,
+   "miss": [
+    "Brauche ich am Wochenende einen Schirm? → kal (soll wetter)",
+    "Was steht heute an? → netz (soll kal)",
+    "Was ist die Hauptstadt von Bulgarien? → wiki (soll fakt)",
+    "Wie geht's dir heute? → wetter (soll chat)"
+   ]
+  }
+ }
+}

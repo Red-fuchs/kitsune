@@ -1,0 +1,425 @@
+{
+ "note": "barge-in verify eval: q = captured fragment (first ~0.6-2 s) while Kitsune says 'speaking'; label 1 = user wants to interrupt/correct, 0 = TV/third party/echo/backchannel. Hand-written 2026-11-06, not tuned on. +8 interrupting questions added after the first run (dev set, thresholds chosen on it).",
+ "items": [
+  {
+   "q": "Okay, nein.",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 1
+  },
+  {
+   "q": "Nein, nein.",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 1
+  },
+  {
+   "q": "Moment.",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 1
+  },
+  {
+   "q": "Warte, warte.",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 1
+  },
+  {
+   "q": "Das stimmt nicht.",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 1
+  },
+  {
+   "q": "Falsch.",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 1
+  },
+  {
+   "q": "Nicht Berlin, Basel.",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 1
+  },
+  {
+   "q": "Ich meinte morgen.",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 1
+  },
+  {
+   "q": "Nein, ich meinte Sofia.",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 1
+  },
+  {
+   "q": "Das reicht schon.",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 1
+  },
+  {
+   "q": "Okay, danke, reicht.",
+   "speaking": "Die Tagesschau meldet: Der Bundestag hat das Haushaltsgesetz beschlossen, die Opposition kritisiert.",
+   "label": 1
+  },
+  {
+   "q": "Ja, ja, schon gut.",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 1
+  },
+  {
+   "q": "Schon gut.",
+   "speaking": "Die Tagesschau meldet: Der Bundestag hat das Haushaltsgesetz beschlossen, die Opposition kritisiert.",
+   "label": 1
+  },
+  {
+   "q": "Ich hab's verstanden.",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 1
+  },
+  {
+   "q": "Lass mal.",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 1
+  },
+  {
+   "q": "Kürzer bitte.",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 1
+  },
+  {
+   "q": "Das wollte ich nicht wissen.",
+   "speaking": "Die Tagesschau meldet: Der Bundestag hat das Haushaltsgesetz beschlossen, die Opposition kritisiert.",
+   "label": 1
+  },
+  {
+   "q": "Das war nicht meine Frage.",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 1
+  },
+  {
+   "q": "Halt mal.",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 1
+  },
+  {
+   "q": "Ähm, eigentlich",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 1
+  },
+  {
+   "q": "Okay, aber",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 1
+  },
+  {
+   "q": "Sorry, ich meinte",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 1
+  },
+  {
+   "q": "Ne, andersrum.",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 1
+  },
+  {
+   "q": "Nicht heute, morgen.",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 1
+  },
+  {
+   "q": "Das ist mir zu lang.",
+   "speaking": "Die Tagesschau meldet: Der Bundestag hat das Haushaltsgesetz beschlossen, die Opposition kritisiert.",
+   "label": 1
+  },
+  {
+   "q": "Lauter bitte.",
+   "speaking": "Mir geht es gut, danke der Nachfrage. Ich bin bereit, wenn du etwas brauchst.",
+   "label": 1
+  },
+  {
+   "q": "Leiser.",
+   "speaking": "Die Tagesschau meldet: Der Bundestag hat das Haushaltsgesetz beschlossen, die Opposition kritisiert.",
+   "label": 1
+  },
+  {
+   "q": "Ich unterbreche dich mal kurz.",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 1
+  },
+  {
+   "q": "Pause.",
+   "speaking": "Die Tagesschau meldet: Der Bundestag hat das Haushaltsgesetz beschlossen, die Opposition kritisiert.",
+   "label": 1
+  },
+  {
+   "q": "Ist gut.",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 1
+  },
+  {
+   "q": "Alles klar, danke.",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 1
+  },
+  {
+   "q": "Okay, okay.",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 1
+  },
+  {
+   "q": "Ja, das weiß ich schon.",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 1
+  },
+  {
+   "q": "Weiter zum nächsten Termin.",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 1
+  },
+  {
+   "q": "Nee, das meinte ich nicht.",
+   "speaking": "Die Tagesschau meldet: Der Bundestag hat das Haushaltsgesetz beschlossen, die Opposition kritisiert.",
+   "label": 1
+  },
+  {
+   "q": "Okay, nein, nein, nein, stopp.",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 1
+  },
+  {
+   "q": "Hör mal kurz zu.",
+   "speaking": "Mir geht es gut, danke der Nachfrage. Ich bin bereit, wenn du etwas brauchst.",
+   "label": 1
+  },
+  {
+   "q": "Andere Frage.",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 1
+  },
+  {
+   "q": "Die Bundesregierung hat heute beschlossen",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 0
+  },
+  {
+   "q": "Und jetzt das Wetter für Norddeutschland",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 0
+  },
+  {
+   "q": "Tor! Tor für Bayern!",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 0
+  },
+  {
+   "q": "Das ist der neue Audi A6",
+   "speaking": "Mir geht es gut, danke der Nachfrage. Ich bin bereit, wenn du etwas brauchst.",
+   "label": 0
+  },
+  {
+   "q": "Im Anschluss sehen Sie",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 0
+  },
+  {
+   "q": "Herzlich willkommen zur Tagesschau",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 0
+  },
+  {
+   "q": "Der Verdächtige wurde festgenommen",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 0
+  },
+  {
+   "q": "Nein, Thomas, das kannst du nicht machen!",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 0
+  },
+  {
+   "q": "Warte auf mich, Julia!",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 0
+  },
+  {
+   "q": "Bleiben Sie dran.",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 0
+  },
+  {
+   "q": "Die Börse schloss im Minus.",
+   "speaking": "Mir geht es gut, danke der Nachfrage. Ich bin bereit, wenn du etwas brauchst.",
+   "label": 0
+  },
+  {
+   "q": "Und nun zu den Sportnachrichten.",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 0
+  },
+  {
+   "q": "Ich liebe dich doch.",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 0
+  },
+  {
+   "q": "Was für ein Spiel heute Abend.",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 0
+  },
+  {
+   "q": "Jetzt neu bei Lidl.",
+   "speaking": "Die Tagesschau meldet: Der Bundestag hat das Haushaltsgesetz beschlossen, die Opposition kritisiert.",
+   "label": 0
+  },
+  {
+   "q": "Schatz, machst du mal den Herd aus?",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 0
+  },
+  {
+   "q": "Hast du die Schlüssel gesehen?",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 0
+  },
+  {
+   "q": "Ich geh kurz einkaufen.",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 0
+  },
+  {
+   "q": "Mama, wo ist mein Handy?",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 0
+  },
+  {
+   "q": "Kannst du mir mal das Salz geben?",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 0
+  },
+  {
+   "q": "Nein, Max, das ist meins!",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 0
+  },
+  {
+   "q": "Okay, bis später.",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 0
+  },
+  {
+   "q": "Das Essen ist fertig.",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 0
+  },
+  {
+   "q": "Ruf mich nachher an.",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 0
+  },
+  {
+   "q": "Wassertropfen gebrochen",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 0
+  },
+  {
+   "q": "siebzehn Uhr Wochen",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 0
+  },
+  {
+   "q": "Ich.",
+   "speaking": "Mir geht es gut, danke der Nachfrage. Ich bin bereit, wenn du etwas brauchst.",
+   "label": 0
+  },
+  {
+   "q": "sieben Grad, Nebel",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 0
+  },
+  {
+   "q": "die Opposition kritisiert",
+   "speaking": "Die Tagesschau meldet: Der Bundestag hat das Haushaltsgesetz beschlossen, die Opposition kritisiert.",
+   "label": 0
+  },
+  {
+   "q": "bereit, wenn du",
+   "speaking": "Mir geht es gut, danke der Nachfrage. Ich bin bereit, wenn du etwas brauchst.",
+   "label": 0
+  },
+  {
+   "q": "Hm.",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 0
+  },
+  {
+   "q": "Äh.",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 0
+  },
+  {
+   "q": "Mhm.",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 0
+  },
+  {
+   "q": "Aha.",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 0
+  },
+  {
+   "q": "Ja.",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 0
+  },
+  {
+   "q": "Okay.",
+   "speaking": "Die Tagesschau meldet: Der Bundestag hat das Haushaltsgesetz beschlossen, die Opposition kritisiert.",
+   "label": 0
+  },
+  {
+   "q": "Genau.",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 0
+  },
+  {
+   "q": "Echt?",
+   "speaking": "Die Tagesschau meldet: Der Bundestag hat das Haushaltsgesetz beschlossen, die Opposition kritisiert.",
+   "label": 0
+  },
+  {
+   "q": "Und warum ist er bunt?",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 1
+  },
+  {
+   "q": "Wie lange dauert das noch?",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 1
+  },
+  {
+   "q": "Und was ist mit morgen?",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 1
+  },
+  {
+   "q": "Kannst du das kürzer sagen?",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 1
+  },
+  {
+   "q": "Wann ist der Brunch?",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 1
+  },
+  {
+   "q": "Was heißt das genau?",
+   "speaking": "Licht wird in Wassertropfen gebrochen und in seine Farben zerlegt, dabei entsteht der Bogen.",
+   "label": 1
+  },
+  {
+   "q": "Und am Wochenende?",
+   "speaking": "In Berlin heute eins bis sieben Grad, Nebel, Wind bis elf Kilometer pro Stunde.",
+   "label": 1
+  },
+  {
+   "q": "Wer ist Anna?",
+   "speaking": "Heute um siebzehn Uhr Wochen-Review. Morgen um elf Uhr Kurs. Sonntag um zehn Uhr Brunch mit Anna.",
+   "label": 1
+  }
+ ]
+}

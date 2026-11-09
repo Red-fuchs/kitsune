@@ -1,0 +1,527 @@
+[
+{
+"q": "Wie wird das Wetter morgen in Basel?",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Was steht heute an?",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Wie viele Einwohner hat Hamburg?",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Wer war Johann Wolfgang von Goethe?",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Was läuft gerade auf der GPU?",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Trag morgen um halb drei Zahnarzt ein.",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Lies mir die erste Meldung vor.",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Was gibt es Neues in den Nachrichten?",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Hallo, wie geht's dir?",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Danke, das war's.",
+"ctx": [
+[
+"Wer war Johann Wolfgang von Goethe?",
+"Johann Wolfgang von Goethe war ein deutscher Dichter und Naturforscher in Weimar."
+]
+],
+"label": 1
+},
+{
+"q": "Wie ist die Temperatur in Plowdiw übermorgen?",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Alles klar, wie ist das Wetter in Sunny Beach?",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Und was ist mit der Donau?",
+"ctx": [
+[
+"Wer war Johann Wolfgang von Goethe?",
+"Johann Wolfgang von Goethe war ein deutscher Dichter und Naturforscher in Weimar."
+]
+],
+"label": 1
+},
+{
+"q": "Warum ist er bunt?",
+"ctx": [
+[
+"Erkläre mir kurz, wie ein Regenbogen entsteht.",
+"Licht wird in Wassertropfen gebrochen und in Farben zerlegt."
+]
+],
+"label": 1
+},
+{
+"q": "Ja, bitte.",
+"ctx": [
+[
+"Trag morgen um halb drei Zahnarzt ein.",
+"Soll ich Zahnarzt morgen um vierzehn Uhr dreißig eintragen?"
+]
+],
+"label": 1
+},
+{
+"q": "Nein, lieber nicht.",
+"ctx": [
+[
+"Trag morgen um halb drei Zahnarzt ein.",
+"Soll ich Zahnarzt morgen um vierzehn Uhr dreißig eintragen?"
+]
+],
+"label": 1
+},
+{
+"q": "Hast du den Termin schon eingetragen?",
+"ctx": [
+[
+"Trag morgen um halb drei Zahnarzt ein.",
+"Soll ich Zahnarzt morgen um vierzehn Uhr dreißig eintragen?"
+]
+],
+"label": 1
+},
+{
+"q": "Kitsune, bist du noch da?",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Sag mir doch bitte das Wetter in Basel.",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Wie spät ist es?",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Stopp.",
+"ctx": [
+[
+"Erkläre mir kurz, wie ein Regenbogen entsteht.",
+"Licht wird in Wassertropfen gebrochen und in Farben zerlegt."
+]
+],
+"label": 1
+},
+{
+"q": "Wer bist du?",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Mach mal das Licht heller, äh, nein, sag mir erst die Uhrzeit.",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Kannst du mir bitte einen Termin eintragen?",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Und übermorgen?",
+"ctx": [
+[
+"Wie wird das Wetter morgen in Basel?",
+"Morgen in Basel drei bis zwölf Grad, leichter Regen."
+]
+],
+"label": 1
+},
+{
+"q": "Wie viel Grad sind das in Fahrenheit?",
+"ctx": [
+[
+"Wie wird das Wetter morgen in Basel?",
+"Morgen in Basel drei bis zwölf Grad, leichter Regen."
+]
+],
+"label": 1
+},
+{
+"q": "Erkläre mir den Unterschied zwischen Gleichstrom und Wechselstrom.",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Hör mal, wie lange dauert der Flug nach Sofia?",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Was ist die Hauptstadt von Bulgarien?",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Sag mal, was heißt Danke auf Bulgarisch?",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Okay, dann trag das ein.",
+"ctx": [
+[
+"Trag morgen um halb drei Zahnarzt ein.",
+"Soll ich Zahnarzt morgen um vierzehn Uhr dreißig eintragen?"
+]
+],
+"label": 1
+},
+{
+"q": "Wiederhol das bitte.",
+"ctx": [
+[
+"Wer war Johann Wolfgang von Goethe?",
+"Johann Wolfgang von Goethe war ein deutscher Dichter und Naturforscher in Weimar."
+]
+],
+"label": 1
+},
+{
+"q": "Das habe ich nicht verstanden, noch mal bitte.",
+"ctx": [
+[
+"Wer war Johann Wolfgang von Goethe?",
+"Johann Wolfgang von Goethe war ein deutscher Dichter und Naturforscher in Weimar."
+]
+],
+"label": 1
+},
+{
+"q": "Nee, ich meinte Plovdiv.",
+"ctx": [
+[
+"Wie wird das Wetter morgen in Basel?",
+"Morgen in Basel drei bis zwölf Grad, leichter Regen."
+]
+],
+"label": 1
+},
+{
+"q": "Du hast die halbe Ausgabe unterbrochen.",
+"ctx": [
+[
+"Erkläre mir kurz, wie ein Regenbogen entsteht.",
+"Licht wird in Wassertropfen gebrochen und in Farben zerlegt."
+]
+],
+"label": 1
+},
+{
+"q": "Lauter bitte.",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Erzähl mir einen Witz.",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Wie heißt der Bürgermeister von Sofia?",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Setz einen Timer auf zehn Minuten.",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Wie komme ich zum Bahnhof?",
+"ctx": [],
+"label": 1
+},
+{
+"q": "Guten Abend, meine Damen und Herren, willkommen zu den Nachrichten.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Die Bundesregierung hat heute neue Pläne für den Ausbau der Bahn vorgestellt.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Bis zum Jahr zweitausendvierzig sollen mehrere hundert Kilometer Strecke saniert werden.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Die Opposition kritisiert die Finanzierung als unklar.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Im Sport gewann die Mannschaft aus Dortmund am Wochenende mit drei zu eins.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Der Trainer lobte nach dem Spiel vor allem die Abwehr.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Und nun zum Wetter: Im Norden bleibt es meist bewölkt.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Die Temperaturen liegen zwischen acht und fünfzehn Grad.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "In der Wirtschaft sind die Preise für Energie leicht gesunken.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Experten erwarten, dass sich der Trend fortsetzt.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Kommissar Weber steht im Flur und fragt.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Wie spät ist es eigentlich? Das weiß ich nicht, ich habe die Uhr zu Hause vergessen.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Wo ist sie jetzt? Wer weiß, vielleicht schläft der Fuchs.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Was machen wir denn jetzt mit dem Fall?",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Trag das bitte in die Akte ein, sagt er.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Dann bleiben wir im Büro und lesen die Berichte noch einmal durch.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Seine Kollegin antwortet.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Ich war gestern noch im Supermarkt, da gab es kaum noch frisches Gemüse.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Hast du schon gehört, dass die Besprechung auf nächste Woche verschoben wurde?",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Wir sollten uns überlegen, wohin wir im Sommer fahren.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Der Zug hatte wieder Verspätung, ich stand zwanzig Minuten am Bahnsteig.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Mama, wo ist mein Handy?",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Kommst du gleich zum Essen?",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Hast du die Schlüssel gesehen?",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Ich glaube, wir müssen morgen noch einkaufen gehen.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Mach bitte die Tür zu, es zieht.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Das war ein tolles Tor!",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Und jetzt zur Wettervorhersage für das Wochenende.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Hallo Schatz, wie war dein Tag?",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Ja, genau, das habe ich ihr auch gesagt.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Warte kurz, ich bin gleich bei dir.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Was möchtest du heute Abend essen?",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Hat der Paketdienst schon geklingelt?",
+"ctx": [],
+"label": 0
+},
+{
+"q": "In den Staaten wurde gestern der neue Präsident vereidigt.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Das Hochdruckgebiet bringt uns sonniges Wetter.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Ich sage dir, der Typ hat keine Ahnung.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Kannst du mir mal den Salz reichen?",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Die Kinder sind schon im Bett.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Wer hat denn das Licht angelassen?",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Da kommt gleich der Werbeblock.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Die Aktie fiel um zwei Prozent auf einhundertvierzig Euro.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Danke, dass du angerufen hast, bis später.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Oh Gott, schau dir das an.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Ich muss gleich noch zum Arzt.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Nein, das stimmt so nicht, das war letzte Woche.",
+"ctx": [],
+"label": 0
+},
+{
+"q": "Kommst du gleich zum Essen?",
+"ctx": [
+[
+"Erkläre mir kurz, wie ein Regenbogen entsteht.",
+"Licht wird in Wassertropfen gebrochen und in Farben zerlegt."
+]
+],
+"label": 0
+},
+{
+"q": "Ja, genau, das habe ich ihr auch gesagt.",
+"ctx": [
+[
+"Erkläre mir kurz, wie ein Regenbogen entsteht.",
+"Licht wird in Wassertropfen gebrochen und in Farben zerlegt."
+]
+],
+"label": 0
+},
+{
+"q": "Was möchtest du heute Abend essen?",
+"ctx": [
+[
+"Erkläre mir kurz, wie ein Regenbogen entsteht.",
+"Licht wird in Wassertropfen gebrochen und in Farben zerlegt."
+]
+],
+"label": 0
+}
+]

@@ -1,0 +1,677 @@
+{
+"_doc": "Held-out router set, labels written 2026-11-03 BEFORE any router change/result (not used for tuning). ok = acceptable final routes (after rules). kind: chat (must end in plaudern/antwort), fact (must NOT be chat), tool (specific tool), asr (ASR-error style; pending = open follow-up state shown to the router). Per-tool accuracy = first element of ok.",
+"items": [
+{
+"id": "h01",
+"q": "Na, wie läuft's bei dir?",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h02",
+"q": "Du bist ganz schön schlau.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h03",
+"q": "Ich hab heute Pizza gegessen, war lecker.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h04",
+"q": "Mir geht's heute nicht so gut.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h05",
+"q": "Bist du eigentlich ein Mensch oder eine Maschine?",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h06",
+"q": "Sing mir was vor.",
+"ok": [
+"plaudern",
+"antwort",
+"wissen"
+],
+"kind": "chat"
+},
+{
+"id": "h07",
+"q": "Das war jetzt echt dumm von dir.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h08",
+"q": "Ich liebe den Sommer in Bulgarien.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h09",
+"q": "Meine Katze hat heute die Vase umgeworfen.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h10",
+"q": "Hast du Hunger?",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h11",
+"q": "Du nervst mich gerade.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h12",
+"q": "Schlaf gut, Kitsune.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h13",
+"q": "Ich habe gestern einen Termin verpasst, so ein Mist.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h14",
+"q": "Heute ist echt viel los bei mir.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h15",
+"q": "Mein Kalender ist ein einziges Chaos, ich hasse das.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h16",
+"q": "Ach, jetzt hab ich ganz vergessen, was ich sagen wollte.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h17",
+"q": "Hallo Kitsune.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h18",
+"q": "Vielen Dank, das hat geholfen.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h19",
+"q": "Okay, alles klar.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h20",
+"q": "Erzähl mir was Lustiges über Füchse.",
+"ok": [
+"plaudern",
+"antwort",
+"wissen"
+],
+"kind": "chat"
+},
+{
+"id": "h21",
+"q": "Ich bin ein Idiot, ich hab den Zug verpasst.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h22",
+"q": "Wer bist du denn?",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h23",
+"q": "Ich glaube, es regnet bald, mir tut der Kopf weh.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "h24",
+"q": "Morgen ist Freitag, endlich.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "chat"
+},
+{
+"id": "f01",
+"q": "Wer hat den Eiffelturm gebaut?",
+"ok": [
+"wiki_suche",
+"wissen"
+],
+"kind": "fact"
+},
+{
+"id": "f02",
+"q": "Wie viele Einwohner hat Varna?",
+"ok": [
+"fakt"
+],
+"kind": "fact"
+},
+{
+"id": "f03",
+"q": "Was ist die Hauptstadt von Kanada?",
+"ok": [
+"fakt",
+"wiki_suche"
+],
+"kind": "fact"
+},
+{
+"id": "f04",
+"q": "Wann wurde Johann Sebastian Bach geboren?",
+"ok": [
+"fakt",
+"wiki_suche"
+],
+"kind": "fact"
+},
+{
+"id": "f05",
+"q": "Wie hoch ist der Mount Everest?",
+"ok": [
+"fakt",
+"wiki_suche"
+],
+"kind": "fact"
+},
+{
+"id": "f06",
+"q": "Was ist Photosynthese?",
+"ok": [
+"wiki_suche",
+"wissen"
+],
+"kind": "fact"
+},
+{
+"id": "f07",
+"q": "Wer ist der Präsident von Frankreich?",
+"ok": [
+"wiki_suche",
+"netz_suche",
+"wissen"
+],
+"kind": "fact"
+},
+{
+"id": "f08",
+"q": "Wie viel ist siebzehn mal vierundzwanzig?",
+"ok": [
+"wissen"
+],
+"kind": "fact"
+},
+{
+"id": "f09",
+"q": "Wer hat gestern das Spiel von Bayern gewonnen?",
+"ok": [
+"netz_suche"
+],
+"kind": "fact"
+},
+{
+"id": "f10",
+"q": "Wie spät ist es gerade in Tokio?",
+"ok": [
+"wissen",
+"netz_suche",
+"wiki_suche"
+],
+"kind": "fact"
+},
+{
+"id": "f11",
+"q": "Was kostet ein Flug nach Sofia?",
+"ok": [
+"netz_suche"
+],
+"kind": "fact"
+},
+{
+"id": "f12",
+"q": "Wie lange fährt der Zug von Berlin nach München?",
+"ok": [
+"netz_suche",
+"wissen",
+"wiki_suche"
+],
+"kind": "fact"
+},
+{
+"id": "f13",
+"q": "Wer war Napoleon?",
+"ok": [
+"wiki_suche",
+"wissen"
+],
+"kind": "fact"
+},
+{
+"id": "f14",
+"q": "Was bedeutet das Wort Sevdah?",
+"ok": [
+"wiki_suche",
+"wissen",
+"dict"
+],
+"kind": "fact"
+},
+{
+"id": "f15",
+"q": "Wie viele Tage hat der Februar?",
+"ok": [
+"wissen",
+"wiki_suche"
+],
+"kind": "fact"
+},
+{
+"id": "f16",
+"q": "Wo liegt das Rila-Kloster?",
+"ok": [
+"wiki_suche",
+"fakt",
+"wissen"
+],
+"kind": "fact"
+},
+{
+"id": "f17",
+"q": "Welche Währung gibt es in Bulgarien?",
+"ok": [
+"fakt",
+"wiki_suche",
+"wissen"
+],
+"kind": "fact"
+},
+{
+"id": "f18",
+"q": "Wie alt ist die Pyramide von Gizeh?",
+"ok": [
+"wiki_suche",
+"wissen",
+"fakt"
+],
+"kind": "fact"
+},
+{
+"id": "t01",
+"q": "Was habe ich morgen für Termine?",
+"ok": [
+"kal_woche",
+"kal_heute"
+],
+"kind": "tool"
+},
+{
+"id": "t02",
+"q": "Welche Termine habe ich diese Woche?",
+"ok": [
+"kal_woche"
+],
+"kind": "tool"
+},
+{
+"id": "t03",
+"q": "Was steht heute auf dem Plan?",
+"ok": [
+"kal_heute"
+],
+"kind": "tool"
+},
+{
+"id": "t04",
+"q": "Trag am Montag um zehn Uhr Zahnarzt ein.",
+"ok": [
+"kal_eintragen"
+],
+"kind": "tool"
+},
+{
+"id": "t05",
+"q": "Mach mir bitte einen Termin für übermorgen um vierzehn Uhr, Friseur.",
+"ok": [
+"kal_eintragen"
+],
+"kind": "tool"
+},
+{
+"id": "t06",
+"q": "Wie wird das Wetter morgen in Sofia?",
+"ok": [
+"wetter"
+],
+"kind": "tool"
+},
+{
+"id": "t07",
+"q": "Regnet es heute in Hamburg?",
+"ok": [
+"wetter"
+],
+"kind": "tool"
+},
+{
+"id": "t08",
+"q": "Was gibt es Neues in der Welt?",
+"ok": [
+"netz_news"
+],
+"kind": "tool"
+},
+{
+"id": "t09",
+"q": "Gibt es Nachrichten zu Bitcoin?",
+"ok": [
+"netz_news"
+],
+"kind": "tool"
+},
+{
+"id": "t10",
+"q": "Such im Netz nach den Öffnungszeiten vom Zoo.",
+"ok": [
+"netz_suche"
+],
+"kind": "tool"
+},
+{
+"id": "t11",
+"q": "Ist die GPU gerade belegt?",
+"ok": [
+"gpu_status"
+],
+"kind": "tool"
+},
+{
+"id": "t12",
+"q": "Was heißt Danke auf Bulgarisch?",
+"ok": [
+"dict"
+],
+"kind": "tool"
+},
+{
+"id": "t13",
+"q": "Wie sagt man guten Morgen auf Englisch?",
+"ok": [
+"dict"
+],
+"kind": "tool"
+},
+{
+"id": "t14",
+"q": "Erkläre mir den Unterschied zwischen Hochdruck und Tiefdruck.",
+"ok": [
+"wissen",
+"wiki_suche"
+],
+"kind": "tool"
+},
+{
+"id": "t15",
+"q": "Kannst du mir erklären, wie eine Wärmepumpe funktioniert?",
+"ok": [
+"wissen",
+"wiki_suche"
+],
+"kind": "tool"
+},
+{
+"id": "t16",
+"q": "Läuft gerade was auf der GPU?",
+"ok": [
+"gpu_status"
+],
+"kind": "tool"
+},
+{
+"id": "t17",
+"q": "Was steht an?",
+"ok": [
+"kal_heute",
+"kal_woche"
+],
+"kind": "tool"
+},
+{
+"id": "t18",
+"q": "Termine heute.",
+"ok": [
+"kal_heute"
+],
+"kind": "tool"
+},
+{
+"id": "t19",
+"q": "Was habe ich nächste Woche vor?",
+"ok": [
+"kal_woche"
+],
+"kind": "tool"
+},
+{
+"id": "a01",
+"q": "Bitte in Berlin.",
+"ok": [
+"wetter"
+],
+"kind": "asr",
+"pending": {
+"stage": "ort",
+"ask": "Für welchen Ort?"
+}
+},
+{
+"id": "a02",
+"q": "ist du im Web ... nachschauen",
+"ok": [
+"netz_ask",
+"netz_suche"
+],
+"kind": "asr"
+},
+{
+"id": "a03",
+"q": "Kannst du im Netz nachschauen wer Kim Kardashian ist?",
+"ok": [
+"netz_suche"
+],
+"kind": "asr"
+},
+{
+"id": "a04",
+"q": "Wie ist das Wetter in Warna?",
+"ok": [
+"wetter"
+],
+"kind": "asr"
+},
+{
+"id": "a05",
+"q": "Schlag mal nach wer Zar Simeon war.",
+"ok": [
+"wiki_suche",
+"wissen"
+],
+"kind": "asr"
+},
+{
+"id": "a06",
+"q": "Wie viele Einwohner hat Plow Diff?",
+"ok": [
+"fakt",
+"wiki_suche"
+],
+"kind": "asr"
+},
+{
+"id": "a07",
+"q": "Was heißt Katze auf Bulgarisch",
+"ok": [
+"dict"
+],
+"kind": "asr"
+},
+{
+"id": "a08",
+"q": "Trag mir morgen um acht Uhr Stand ab ein.",
+"ok": [
+"kal_eintragen"
+],
+"kind": "asr"
+},
+{
+"id": "a09",
+"q": "Was läuft denn gerade auf der Gebühr?",
+"ok": [
+"gpu_status"
+],
+"kind": "asr"
+},
+{
+"id": "a10",
+"q": "Kitsune was steht an",
+"ok": [
+"kal_heute",
+"kal_woche"
+],
+"kind": "asr"
+},
+{
+"id": "a11",
+"q": "Hör mal, ich hab Kopfschmerzen und keine Lust mehr.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "asr"
+},
+{
+"id": "a12",
+"q": "Bist du noch da?",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "asr"
+},
+{
+"id": "a13",
+"q": "Hm okay und jetzt",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "asr"
+},
+{
+"id": "a14",
+"q": "Ja genau so war das.",
+"ok": [
+"plaudern",
+"antwort"
+],
+"kind": "asr"
+},
+{
+"id": "a15",
+"q": "Wer ist Zar Simeon?",
+"ok": [
+"wiki_suche",
+"wissen"
+],
+"kind": "asr"
+}
+]
+}

@@ -1,0 +1,18 @@
+{
+ "d1-2B": {
+  "score": "3/3",
+  "rows": [
+   "✓ cats.jpg                     a     → katze (1.0) soll katze  [525 ms]",
+   "✓ cats.jpg                     n     → 2 ([0.9987076737896574, 0.9741786455249744, 7.191168892412975e-05, 0.0]) soll 2  [525 ms]",
+   "✓ cats.jpg                     c     → zwei (1.0) soll zwei  [525 ms]"
+  ]
+ },
+ "d1-omni": {
+  "score": "3/3",
+  "rows": [
+   "✓ cats.jpg                     a     → katze (0.98) soll katze  [519 ms]",
+   "✓ cats.jpg                     n     → 2 ([1.0, 0.9923318863181105, 0.000132047224790175, 0.0]) soll 2  [519 ms]",
+   "✓ cats.jpg                     c     → zwei (0.97) soll zwei  [519 ms]"
+  ]
+ }
+}

@@ -1,0 +1,11 @@
+# Python 3.11+ on Apple Silicon. mlx_vlm: this project expects a fork/branch with LFM3-Audio support
+# (mlx_vlm.models.lfm3_audio); point KITSUNE_MLXVLM_SRC at that checkout or install it into the venv.
+mlx
+mlx-vlm
+mlx-audio
+numpy
+scipy
+llguidance
+sounddevice
+# sim/ only
+pyyaml

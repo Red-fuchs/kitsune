@@ -1,0 +1,237 @@
+# events: say (voice thorsten|emo[:x]|lfm3, speed, pitch, level_db, expect{tool|tool_in|contains|not_contains|args_re|transcript_re|silent|no_turn|barge}),
+#         noise (bed fan|street|auto|babble|tv|tv_hard|keys, db rel. user speech, dur)
+# timing: at (abs s) | after (s after prev say end) | after_kitsune_start (s) | default = after_reply 1 s (Kitsune finished the reply)
+- {name: wetter_basel, core: true, desc: "real log: weather Basel", events: [{say: "Wie wird das Wetter morgen in Basel?", expect: {tool: wetter, args_re: "basel"}}]}
+- {name: wetter_sunny_beach, desc: "real log", events: [{say: "Alles klar, wie ist das Wetter in Sunny Beach?", expect: {tool: wetter, args_re: "sunny|sonnen"}}]}
+- {name: wetter_plowdiw, desc: "real log: odd place name; place correction -> silent use or 'Meinst du Plowdiw?'", events: [{say: "Wie ist die Temperatur in Plowdiw übermorgen?", expect: {tool: wetter, contains: "Plowdiw"}}]}
+- name: wetter_ort_nachfragen
+  desc: weather without place -> asks, user answers
+  events:
+    - {say: "Wie wird das Wetter morgen?", expect: {tool: wetter, contains: "Ort"}}
+    - {say: "In Basel.", expect: {tool_in: ["pending:ort"]}}
+- {name: smalltalk_wie_geht, core: true, desc: "real log: parroting", events: [{say: "Hallo nochmal, Kitsune. Wie geht es dir heute?", expect: {tool_in: [plaudern, antwort], not_contains: "wie geht es dir"}}, {say: "Na, das ist ja wunderbar. Wer bist du?", expect: {tool: plaudern}}]}
+- {name: smalltalk_beleidigung, desc: "real log", events: [{say: "Bist du eine süße, dreckige kleine Göre?", expect: {tool: plaudern}}]}
+- name: kal_bestaetigen
+  core: true
+  desc: "real log: add, status question, confirm"
+  events:
+    - {say: "Das ist ein Beispiel, mach mir morgen einen Termin um neun Uhr mit Meditation.", expect: {tool: kal_eintragen}}
+    - {say: "Hast du's schon gemacht?", expect: {tool: "pending:confirm", contains: "Noch nicht"}}
+    - {say: "Bestätige, bitte eintragen.", expect: {tool: "pending:confirm", contains: "Probelauf"}}
+- name: kal_zeit_nachfragen
+  desc: missing time -> follow-up -> yes
+  events:
+    - {say: "Trag am Freitag Yoga ein.", expect: {tool: kal_eintragen, contains: "Uhr"}}
+    - {say: "Um achtzehn Uhr dreißig.", expect: {tool: "pending:when"}}
+    - {say: "Ja bitte.", expect: {tool: "pending:confirm", contains: "eingetragen"}}
+- name: kal_ablehnen
+  desc: decline
+  events:
+    - {say: "Trag morgen um halb drei Zahnarzt ein.", expect: {tool: kal_eintragen}}
+    - {say: "Nein, lieber nicht.", expect: {tool_in: ["pending:confirm", "pending:when"], contains: "lasse"}}
+- name: kal_zweiteilig
+  core: true
+  desc: user pauses 0.7 s mid sentence (hangover 0.4 s -> resume path)
+  events:
+    - {say: "Trag morgen um halb drei", expect: {tool: kal_eintragen}}
+    - {say: "Zahnarzt ein.", after: 0.7, expect: {tool: kal_eintragen}}
+- {name: kal_heute, desc: calendar, events: [{say: "Was steht heute an?", expect: {tool: kal_heute}}]}
+- {name: kal_woche_emo_schnell, desc: "emotional voice, 1.2x speed, +2 semitones", events: [{say: "Was habe ich diese Woche für Termine?", voice: "emo:neutral", speed: 1.2, pitch: 2, expect: {tool: kal_woche}}]}
+- {name: fakt_einwohner, desc: fact, events: [{say: "Wie viele Einwohner hat Hamburg?", expect: {tool: fakt}}]}
+- {name: wiki_goethe, desc: wiki, events: [{say: "Wer war Johann Wolfgang von Goethe?", expect: {tool_in: [wiki_suche, wissen]}}]}
+- {name: gpu_status, desc: gpu, events: [{say: "Was läuft gerade auf der GPU?", expect: {tool: gpu_status}}]}
+- name: name_varianten
+  desc: wake-name ASR variants (rules.NAME)
+  events:
+    - {say: "Kitsune, bist du noch da?", expect: {tool_in: [plaudern, antwort], name: true}}
+    - {say: "Hey Kitsune, wie geht es dir sonst so?", expect: {tool: plaudern, name: true}}
+- name: ignorieren_dann_name
+  core: true
+  desc: "real log: not addressed to Kitsune -> silent until name"
+  events:
+    - {say: "Ignoriert das, das ist nicht an dich gerichtet.", expect: {tool: ignore}}
+    - {say: "Ja, bitte.", expect: {tool: ignored, silent: true}}
+    - {say: "Kitsune, bist du noch da?", expect: {tool_in: [plaudern, antwort]}}
+- name: ignorieren_dann_frage
+  desc: a clear question wakes it
+  events:
+    - {say: "Ignoriert das, das ist nicht an dich gerichtet.", expect: {tool: ignore}}
+    - {say: "Wer war Johann Wolfgang von Goethe?", expect: {tool_in: [wiki_suche, wissen]}}
+- name: barge_stopp_morgen
+  core: true
+  desc: "real log: 'Stopp, und morgen?' 2 s into a long answer"
+  events:
+    - {say: "Erkläre mir kurz, wie ein Regenbogen entsteht.", expect: {tool_in: [wissen, wiki_suche, plaudern]}}
+    - {say: "Stopp, und warum ist er bunt?", after_kitsune_start: 3.2, expect: {barge: true}}
+- name: barge_fragmente
+  desc: "real log: 'oder' / 'Sport.' fragments while Kitsune talks"
+  events:
+    - {say: "Erkläre mir den Unterschied zwischen Gleichstrom und Wechselstrom.", expect: {tool_in: [wissen, wiki_suche]}}
+    - {say: "Oder.", after_kitsune_start: 3.0, level_db: -3, expect: {tool_in: [barge_false, gate_drop, none]}}
+    - {say: "Sport.", after: 2.5, level_db: -3, expect: {tool_in: [barge_false, gate_drop, none]}}
+- name: tv_leerlauf
+  core: true
+  mode: standby
+  desc: standby + TV news voice at -12 dB -> nothing may happen (no name in the TV text)
+  run_for: 40
+  expect_scn: {max_false_wake: 0, max_spurious: 0, max_kitsune_s: 0.5}
+  events: [{noise: tv, db: -12, at: 0}]
+- name: tv_leerlauf_hart
+  mode: standby
+  desc: standby + TV that says the name once ("Kitsune hat uns doch gestern geholfen") -> at most one false wake
+  run_for: 45
+  expect_scn: {max_false_wake: 2}
+  events: [{noise: tv_hard, db: -12, at: 0}]
+- name: tv_leise
+  mode: standby
+  desc: idle + TV at -20 dB (below the 0.004 RMS gate -> should stay quiet; shows the level boundary)
+  run_for: 30
+  expect_scn: {max_false_wake: 0, max_kitsune_s: 0.5}
+  events: [{noise: tv, db: -20, at: 0}]
+- name: tv_waehrend_antwort
+  core: true
+  desc: Kitsune speaking while TV voice runs -> no false barge-in
+  run_for: 26
+  expect_scn: {max_false_barge: 0}
+  events:
+    - {say: "Erkläre mir kurz, wie ein Regenbogen entsteht.", at: 2, expect: {tool_in: [wissen, wiki_suche, plaudern]}}
+    - {noise: tv, db: -12, after_kitsune_start: 0.5, dur: 9}
+- name: tv_befehl
+  desc: command spoken over TV
+  events:
+    - {noise: tv, db: -15, at: 0}
+    - {say: "Kitsune, wie viele Einwohner hat Hamburg?", at: 5, expect: {tool: fakt}}
+- name: babble_fakt
+  desc: restaurant babble at -15 dB
+  events:
+    - {noise: babble, db: -15, at: 0}
+    - {say: "Wie viele Einwohner hat Hamburg?", at: 4, expect: {tool: fakt}}
+    - {say: "Danke, das war's.", expect: {tool: antwort}}
+- name: tastatur
+  desc: keyboard clicks
+  events:
+    - {noise: keys, db: -14, at: 0}
+    - {say: "Was steht heute an?", at: 3, expect: {tool: kal_heute}}
+    - {say: "Danke, das war's.", expect: {tool: antwort, contains: "geschehen"}}
+- name: leise_nutzer
+  desc: user far away / quiet (-9 dB)
+  events:
+    - {say: "Wer war Johann Wolfgang von Goethe?", level_db: -9, expect: {tool_in: [wiki_suche, wissen]}}
+    - {say: "Wie viele Einwohner hat Hamburg?", level_db: -12, expect: {tool: fakt}}
+- name: news_nachfrage
+  desc: news then read first item (long answers)
+  events:
+    - {say: "Was gibt es Neues in den Nachrichten?", expect: {tool: netz_news}}
+    - {say: "Lies mir die erste Meldung vor.", expect: {tool: netz_lies}}
+- name: tv_aktiv_m6
+  gate: true
+  core: true
+  desc: ACTIVE mode (no timeout) + TV at -6 dB for 90 s -> addressee gate; target <=1 false wake / 10 min
+  run_for: 90
+  expect_scn: {max_false_wake: 0}
+  events: [{noise: tv, db: -6, at: 0}]
+- name: tv_aktiv_m9
+  gate: true
+  desc: ACTIVE + TV at -9 dB for 90 s
+  run_for: 90
+  expect_scn: {max_false_wake: 0}
+  events: [{noise: tv, db: -9, at: 0}]
+- name: tv_hart_aktiv
+  gate: true
+  desc: ACTIVE + TV drama with questions/commands (no name) at -9 dB
+  run_for: 60
+  expect_scn: {max_false_wake: 2}
+  events: [{noise: tv_hard, db: -9, at: 0}]
+- name: nutzer_ueber_tv
+  desc: user commands over TV at -15 dB (user level 0 dB); at -9 the RMS VAD merges TV and user (known limit)
+  events:
+    - {noise: tv, db: -15, at: 0}
+    - {say: "Kitsune, wie viele Einwohner hat Hamburg?", at: 6, expect: {tool: fakt}}
+    - {say: "Und was steht heute an?", expect: {tool: kal_heute}}
+- name: stopp_idle
+  gate: true
+  desc: "Stopp alone while Kitsune is silent -> no answer"
+  events: [{say: "Stopp.", expect: {silent: true}}]
+- name: stopp_barge
+  desc: "Stopp alone during a long answer -> cut, no reply"
+  events:
+    - {say: "Erkläre mir kurz, wie ein Regenbogen entsteht.", expect: {tool_in: [wissen, wiki_suche, plaudern]}}
+    - {say: "Stopp.", after_kitsune_start: 2.0, expect: {barge: true}}
+- name: wake_nur_name
+  core: true
+  mode: standby
+  desc: name only -> "Ja?"; follow-up without the name is answered
+  events:
+    - {say: "Kitsune?", expect: {tool: wake, contains: "Ja"}}
+    - {say: "Was steht heute an?", expect: {tool: kal_heute}}
+    - {say: "Und wie viele Einwohner hat Hamburg?", expect: {tool: fakt}}
+- name: wake_direkt
+  core: true
+  mode: standby
+  desc: name + request in one utterance
+  events: [{say: "Kitsune, was steht heute an?", expect: {tool: kal_heute}}]
+- name: standby_ohne_name
+  core: true
+  mode: standby
+  desc: no name -> silent drop; with name -> answer
+  events:
+    - {say: "Was steht heute an?", expect: {tool: standby_drop, silent: true}}
+    - {say: "Wie viele Einwohner hat Hamburg?", expect: {tool: standby_drop, silent: true}}
+    - {say: "Kizune, was steht heute an?", expect: {tool: kal_heute}}
+- name: standby_timeout
+  core: true
+  mode: standby
+  standby_s: 12
+  desc: after the standby timeout the name is needed again
+  events:
+    - {say: "Kitsune, was steht heute an?", expect: {tool: kal_heute}}
+    - {say: "Was steht heute an?", at: 40, expect: {tool: standby_drop, silent: true}}
+- name: standby_pause
+  core: true
+  mode: standby
+  desc: 'Kitsune Pause and danke das waers end the conversation'
+  events:
+    - {say: "Kitsune, was steht heute an?", expect: {tool: kal_heute}}
+    - {say: "Kitsune, Pause.", expect: {tool: end, contains: "still"}}
+    - {say: "Was steht heute an?", expect: {tool: standby_drop, silent: true}}
+    - {say: "Kitsune, wie viele Einwohner hat Hamburg?", expect: {tool: fakt}}
+    - {say: "Danke, das war's.", expect: {tool: antwort, contains: "geschehen"}}
+    - {say: "Was steht heute an?", expect: {tool: standby_drop, silent: true}}
+- name: wake_tv_standby
+  mode: standby
+  desc: standby + TV at -15 dB + user wakes it over the TV
+  events:
+    - {noise: tv, db: -15, at: 0}
+    - {say: "Kitsune, wie viele Einwohner hat Hamburg?", at: 6, expect: {tool: fakt}}
+- {name: dict_danke, desc: "dict tool; Bulgarian is spoken as German-readable transliteration (no LFM3-bg TTS)", events: [{say: "Wie sagt man Danke auf Bulgarisch?", expect: {tool: dict, contains: "blagodarja", not_contains: "благодаря"}}]}
+- {name: fakt_plowdiw, desc: "fakt template with real data", events: [{say: "Wie viele Einwohner hat Plowdiw?", expect: {tool: fakt, contains: "Plowdiw"}}]}
+- name: kal_was
+  desc: title missing -> asks what
+  events:
+    - {say: "Trag morgen um halb drei ein.", expect: {tool: kal_eintragen, contains: "Was soll"}}
+    - {say: "Ein Termin beim Zahnarzt.", expect: {tool: "pending:what", contains: "Zahnarzt"}}
+- name: pause_mitten_im_satz
+  desc: 0.9 s pause after a preposition/number -> endpointing waits (incomplete transcript)
+  events:
+    - {say: "Wie wird das Wetter morgen in", expect: {tool: wetter}}
+    - {say: "Basel?", after: 0.9, expect: {tool: wetter, args_re: "basel"}}
+- name: weiterreden_nach_ack
+  desc: user continues 1.0 s after a complete short sentence
+  events:
+    - {say: "Was steht heute an?", expect: {tool_in: [kal_heute]}}
+    - {say: "Und wie viele Einwohner hat Hamburg?", after: 1.0, expect: {tool_in: [fakt, kal_heute]}}
+- name: wetter_ellipse
+  desc: "elliptic weather follow-ups ('und in X?', 'und morgen?') reuse the last weather slots"
+  events:
+    - {say: "Wie ist das Wetter in Berlin?", expect: {tool: wetter, args_re: "berlin"}}
+    - {say: "Und in Basel?", expect: {tool_in: [wetter, "pending:ort_confirm"], contains: "Basel"}}
+    - {say: "Und wie wird es morgen?", expect: {tool_in: [wetter, "pending:ort_confirm"], contains: "morgen"}}
+- name: barge_nein_stopp
+  desc: "real log 2026-11-06: 'Okay, nein, nein, nein, stopp.' during a long calendar list was vetoed (p 0.78 < 0.9)"
+  events:
+    - {say: "Was habe ich kommende Woche für Termine?", expect: {tool: kal_woche}}
+    - {say: "Okay, nein, nein, nein, stopp.", after_kitsune_start: 3.0, expect: {barge: true}}
+- name: frage_tempo
+  desc: "real log 2026-11-06: 'Geschwindigkeit' matched the weather word 'wind' -> calendar list repeated"
+  events:
+    - {say: "Gut, gut. Kannst du auch schneller sprechen oder ist das deine Maximalgeschwindigkeit?", expect: {tool_in: [plaudern, antwort, wissen]}}

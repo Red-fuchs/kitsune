@@ -1,0 +1,46 @@
+{
+ "d1-2B": {
+  "score": "13/16",
+  "rows": [
+   "✓ dog.png                      a     → hund (0.99) soll hund  [727 ms]",
+   "✓ cat.png                      a     → katze (0.99) soll katze  [208 ms]",
+   "✓ fish.png                     a     → fisch (0.99) soll fisch  [208 ms]",
+   "cats.jpg: ERROR ValueError('question \\'c\\': a choice\\'s \"criteria\" names the options: {\"billing\": \"Charges and refunds\", \"shipping\": \"Delivery\"}; a list of levels is a score')",
+   "✓ desktop_setup.png            k     → foto (0.93) soll foto  [507 ms]",
+   "✓ desktop_setup.png            plant → True (0.98) soll True  [507 ms]",
+   "✓ desktop_setup.png            cat   → False (0.01) soll False  [507 ms]",
+   "✓ desktop_setup.png            spk   → 2 ([0.9912643383799047, 0.9284159511050674, 0.1982045539591103, 0.026631513667472576]) soll 2  [507 ms]",
+   "✓ desktop_setup.png            drum  → True (0.9) soll True  [507 ms]",
+   "✓ password.jpg                 k     → beleg (0.68) soll beleg  [619 ms]",
+   "✗ password.jpg                 pw    → None (0.0) soll aaeu  [619 ms]",
+   "✗ password.jpg                 user  → None (0.0) soll fqpp  [619 ms]",
+   "✓ password.jpg                 wifi  → True (0.94) soll True  [619 ms]",
+   "✓ graph.png                    k     → diagramm (0.99) soll diagramm  [2529 ms]",
+   "✗ renewables_california.png    k     → screenshot (0.89) soll diagramm  [1423 ms]",
+   "✓ webpage_1.png                k     → screenshot (0.95) soll screenshot  [3472 ms]",
+   "✓ paper.png                    k     → dokument (0.89) soll dokument  [2940 ms]"
+  ]
+ },
+ "d1-omni": {
+  "score": "12/16",
+  "rows": [
+   "✓ dog.png                      a     → hund (0.93) soll hund  [337 ms]",
+   "✓ cat.png                      a     → katze (0.95) soll katze  [252 ms]",
+   "✓ fish.png                     a     → fisch (0.93) soll fisch  [259 ms]",
+   "cats.jpg: ERROR ValueError('question \\'c\\': a choice\\'s \"criteria\" names the options: {\"billing\": \"Charges and refunds\", \"shipping\": \"Delivery\"}; a list of levels is a score')",
+   "✓ desktop_setup.png            k     → foto (0.83) soll foto  [684 ms]",
+   "✓ desktop_setup.png            plant → True (0.94) soll True  [684 ms]",
+   "✓ desktop_setup.png            cat   → False (0.04) soll False  [684 ms]",
+   "✓ desktop_setup.png            spk   → 2 ([0.9231591438248348, 0.9170044193976531, 0.04020493464639244, 0.0016983564106969203]) soll 2  [684 ms]",
+   "✓ desktop_setup.png            drum  → True (0.9) soll True  [684 ms]",
+   "✗ password.jpg                 k     → dokument (0.48) soll beleg  [1297 ms]",
+   "✗ password.jpg                 pw    → None (0.0) soll aaeu  [1297 ms]",
+   "✗ password.jpg                 user  → None (0.0) soll fqpp  [1297 ms]",
+   "✓ password.jpg                 wifi  → True (0.94) soll True  [1297 ms]",
+   "✓ graph.png                    k     → diagramm (0.95) soll diagramm  [2827 ms]",
+   "✗ renewables_california.png    k     → screenshot (0.64) soll diagramm  [993 ms]",
+   "✓ webpage_1.png                k     → screenshot (0.87) soll screenshot  [3303 ms]",
+   "✓ paper.png                    k     → dokument (0.89) soll dokument  [3369 ms]"
+  ]
+ }
+}

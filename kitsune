@@ -1,0 +1,8 @@
+#!/bin/zsh
+# kitsune v0: whole process under a gpu-run lease (RAM gate); exits (unloads) after 10 min idle.
+# Interactive mic loop = user is waiting → --prio (skips GPU queue, runs parallel to other GPU jobs).
+# Headless subcommands (ask/text/say: tests, agents) queue normally. KITSUNE_PRIO=0|1 overrides.
+D=${0:A:h}
+sub=${${(M)@:#[^-]*}[1]}   # first non-option arg = subcommand
+prio=${KITSUNE_PRIO:-$([[ $sub == (ask|text|say) ]] && echo 0 || echo 1)}
+exec ${KITSUNE_ECHO:+echo} gpu-run -n kitsune --ram 15 ${${prio:#0}:+--prio} ${KITSUNE_PY:-$HOME/.venvs/mlxvlm/bin/python} -I $D/kitsune.py "$@"

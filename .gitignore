@@ -1,0 +1,6 @@
+logs/
+cache/
+wavs/out/
+__pycache__/
+aec/kitsune-aec
+sim/reports/

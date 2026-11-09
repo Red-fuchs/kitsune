@@ -1,0 +1,35 @@
+# 2026-11-03 live-log fixes: self-echo with a wrong first calibration, web route, "und zwar" follow-up. python sim/run.py --scen-file sim/scenarios_selfhear.yaml --scen selbstecho_kalib,web_route,und_zwar
+- name: selbstecho_kalib
+  desc: "incident 17:20:48: first G calibration 7x too low (calib_scale 0.15) + long answer, user silent -> no barge-in on Kitsune's own voice"
+  calib_scale: 0.15
+  run_for: 24
+  expect_scn: {max_false_barge: 0}
+  events:
+    - {say: "Erkläre mir kurz, wie ein Regenbogen entsteht.", at: 2, expect: {tool_in: [wissen, wiki_suche, plaudern]}}
+- name: selbstecho_kalib2
+  desc: same with two answers in a row (G kept across turns)
+  calib_scale: 0.15
+  run_for: 40
+  expect_scn: {max_false_barge: 0}
+  events:
+    - {say: "Wie geht es dir?", at: 2, expect: {tool_in: [plaudern, antwort]}}
+    - {say: "Wie funktioniert ein Kühlschrank?", expect: {tool_in: [wissen, wiki_suche, plaudern]}}
+- name: web_route
+  desc: "real log 17:22:18: 'im Web nachschauen' went to wiki_suche"
+  events:
+    - {say: "Such mal im Internet nach Wolfgang Amadeus Mozart.", expect: {tool: netz_suche, args_re: "mozart"}}
+    - {say: "Kannst du im Web nachschauen, wer Mozart war?", expect: {tool: netz_suche, args_re: "mozart"}}
+- name: und_zwar
+  desc: "real log 17:22:41: 'und zwar <X>' 10+ s after the answer was gate_drop; must refine the search"
+  gate: true
+  events:
+    - {say: "Kitsune, such im Internet nach Kimi.", expect: {tool: netz_suche}}
+    - {say: "Und zwar Kimi C.", after_reply: 11, expect: {tool: netz_suche, args_re: "k[ia]"}}
+- name: tv_nach_antwort
+  gate: true
+  desc: "Hm? relaxation must not regress TV: answer, then TV talk -9 dB for 60 s in ACTIVE mode -> at most one false 'Hm?'"
+  run_for: 70
+  expect_scn: {max_false_wake: 1}
+  events:
+    - {say: "Wie geht es dir?", at: 2, expect: {tool_in: [plaudern, antwort]}}
+    - {noise: tv, db: -9, after_kitsune_start: 3, dur: 60}
